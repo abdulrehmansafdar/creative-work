@@ -1,0 +1,375 @@
+:root {
+    --primary: #4a74ac;
+    --secondary: #0828dd;
+    --light: #f5f5f5;
+    --dark: #353538;
+    /* --header--height: 3.5rem;
+
+  --body--font: "Montserrat", sans-serif;
+  --normal-font-size: 1.038rem;
+  --font-regular: 400;
+  --font-semi-bold: 700;
+  --z-tooltip: 10;
+  --z-fixed: 100; */
+}
+
+.slid {
+    margin-top: 80px;
+}
+
+/*navbar start  */
+.navbar {
+    position: fixed;
+    top: 0;
+    z-index: 9999;
+    align-items: start !important;
+    background-color: var(--secondary);
+    justify-content: space-between;
+    color: var(--light);
+    width: 92%;
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+}
+
+
+.btn-success {
+    margin-top: 10px;
+    background-color: #01AB11;
+    padding: 10px 20px;
+}
+
+.logo1 {
+    border-radius: 20px;
+}
+
+/* nav bar end  */
+
+
+.service-item {
+    box-shadow: #454547;
+    transition: 0.4s;
+}
+
+.service-item:hover {
+    background: var(--primary);
+}
+
+.service-item * {
+    transition: 0.2s;
+}
+
+.service-item:hover {
+    color: var(--light);
+}
+
+
+/* Custom styles for the carousel */
+
+/* Adjust the size and position of the caption */
+.carousel-caption {
+    background-color: rgba(70, 70, 71, 0.7);
+    /* Dark background color for better text readability */
+    border-radius: 10px;
+    padding: 20px;
+    text-align: center;
+}
+
+/* Style for the caption text */
+.carousel-caption h3 {
+    color: #fff;
+    font-size: 2em;
+    margin-bottom: 10px;
+}
+
+.carousel-caption p {
+    color: #fff;
+    font-size: 1.2em;
+}
+
+/* Customize the carousel indicators/dots */
+.carousel-indicators {
+    bottom: 20px;
+}
+
+.carousel-indicators button {
+    background-color: #fff;
+    border: 2px solid #fff;
+}
+
+.carousel-indicators .active {
+    background-color: #6a6d70;
+    /* Active dot color */
+}
+
+/* Adjust the size and style of the control icons */
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    background-color: #656c74;
+    /* Control icon color */
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+    width: 5%;
+}
+
+/* Make the controls more transparent when not hovered */
+.carousel-control-prev:hover,
+.carousel-control-next:hover {
+    background-color: rgba(76, 77, 78, 0.5);
+}
+
+
+
+
+
+
+
+/* Button used to open the contact form - fixed at the bottom of the page */
+.open-button {
+    background-color: var(--primary);
+    color: white;
+    padding: 16px 20px;
+    border: none;
+    cursor: pointer;
+    opacity: 0.8;
+    position: fixed;
+    bottom: 23px;
+    right: 28px;
+    width: 280px;
+}
+
+/* The popup form - hidden by default */
+.form-popup {
+    display: none;
+    position: fixed;
+    bottom: 0;
+    right: 15px;
+    border: 3px solid #f1f1f1;
+    z-index: 9;
+}
+
+/* Add styles to the form container */
+.form-container {
+    max-width: 300px;
+    padding: 10px;
+    background-color: white;
+}
+
+/* Full-width input fields */
+.form-container input[type=text],
+.form-container input[type=password] {
+    width: 100%;
+    padding: 15px;
+    margin: 5px 0 22px 0;
+    border: none;
+    background: #f1f1f1;
+}
+
+/* When the inputs get focus, do something */
+.form-container input[type=text]:focus,
+.form-container input[type=password]:focus {
+    background-color: #ddd;
+    outline: none;
+}
+
+/* Set a style for the submit/login button */
+.form-container .btn {
+    background-color: #04AA6D;
+    color: white;
+    padding: 16px 20px;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    margin-bottom: 10px;
+    opacity: 0.8;
+}
+
+/* Add a red background color to the cancel button */
+.form-container .cancel {
+    background-color: red;
+}
+
+/* Add some hover effects to buttons */
+.form-container .btn:hover,
+.open-button:hover {
+    opacity: 1;
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+
+.container1 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 1000px;
+    height: 600px;
+    background: #f5f5f5;
+    box-shadow: 0 30px 50px #dbdbdb;
+}
+
+.container1 .slide .item {
+    width: 200px;
+    height: 300px;
+    position: absolute;
+    top: 50%;
+    transform: translate(0, -50%);
+    border-radius: 20px;
+    box-shadow: 0 30px 50px #505050;
+    background-position: 50% 50%;
+    background-size: cover;
+    display: inline-block;
+    transition: 0.5s;
+}
+
+.slide .item:nth-child(1),
+.slide .item:nth-child(2) {
+    top: 0;
+    left: 0;
+    transform: translate(0, 0);
+    border-radius: 0;
+    width: 100%;
+    height: 100%;
+}
+
+
+.slide .item:nth-child(3) {
+    left: 50%;
+}
+
+.slide .item:nth-child(4) {
+    left: calc(50% + 220px);
+}
+
+.slide .item:nth-child(5) {
+    left: calc(50% + 440px);
+}
+
+/* here n = 0, 1, 2, 3,... */
+.slide .item:nth-child(n + 6) {
+    left: calc(50% + 660px);
+    opacity: 0;
+}
+
+
+
+.item .content {
+    position: absolute;
+    top: 50%;
+    left: 100px;
+    width: 300px;
+    text-align: left;
+    color: #eee;
+    transform: translate(0, -50%);
+    font-family: system-ui;
+    display: none;
+}
+
+
+.slide .item:nth-child(2) .content {
+    display: block;
+}
+
+
+.content .name {
+    font-size: 40px;
+    text-transform: uppercase;
+    font-weight: bold;
+    opacity: 0;
+    animation: animate 1s ease-in-out 1 forwards;
+}
+
+.content .des {
+    margin-top: 10px;
+    margin-bottom: 20px;
+    opacity: 0;
+    animation: animate 1s ease-in-out 0.3s 1 forwards;
+}
+
+.content button {
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    opacity: 0;
+    animation: animate 1s ease-in-out 0.6s 1 forwards;
+}
+
+
+@keyframes animate {
+    from {
+        opacity: 0;
+        transform: translate(0, 100px);
+        filter: blur(33px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translate(0);
+        filter: blur(0);
+    }
+}
+
+
+
+.button {
+    width: 100%;
+    text-align: center;
+    position: absolute;
+    bottom: 20px;
+}
+
+.button button {
+    width: 40px;
+    height: 35px;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+    margin: 0 5px;
+    border: 1px solid #000;
+    transition: 0.3s;
+}
+
+.button button:hover {
+    background: #ababab;
+    color: #fff;
+}
+
+/* Adjust carousel transition duration */
+.carousel-inner {
+    transition: transform 0.8s ease-in-out;
+    /* Example: adjust to 0.8 seconds */
+}
+
+/* Add this CSS to your existing stylesheet or in a <style> tag in the head of your HTML */
+
+/* Image hover effect with zoom */
+.destination a {
+    display: block;
+    position: relative;
+    overflow: hidden;
+}
+
+.destination a .img-fluid {
+    transition: transform 0.3s ease-in-out;
+    /* Add a smooth transition effect */
+}
+
+.destination a:hover .img-fluid {
+    transform: scale(1.2);
+    /* Example: zoom the image to 120% on hover */
+}
+
+/* Additional styles for the text overlays */
+.destination a .bg-white.text-danger,
+.destination a .bg-white.text-primary {
+    position: absolute;
+    /* Your existing styles for text overlays */
+}
